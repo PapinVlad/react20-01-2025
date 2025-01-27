@@ -9,38 +9,42 @@ import Colour from "./components/propsTesting/Colour";
 import UserCard from "./components/propsTesting/UserCard";
 import ProductCard from "./components/propsTesting/ProductCard";
 import Counter from "./components/stateTesting/Counter";
+import "./App.css";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
-const App =()=> {
-  
+
+
+const App = () => {
   return (
     <>
-    <Router>
-      <Navigation />
+      <Router>
+        <Navigation />
         <main>
           <Routes>
             <Route path="/slide" element={<Slide />} />
             <Route path="/animation" element={<Animation />} />
-            <Route path="/listofitems" element ={<ListOfItems />} />
-
-
-         </Routes>
-       </main>
+            <Route path="/listofitems" element={<ListOfItems />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+      </Router>
+      <div className="container">
         <CurrentDate />
-    </Router>
-    
-    <div>
-      <Colour colour = "blue" />
-      <UserCard name = "John" age = "25" location = "Glasgow" />
-      <UserCard name = "Jane" age = "30" location = "Edinburgh" />
-    </div>
-    <div>
-      <ProductCard name = "Laptop" price = "£500" description = "A laptop" />
-      <ProductCard name = "Phone" price = "£200" description = "A phone" />       
-    </div>
-    <Counter />
+        <div>
+          <Colour colour="blue" />
+          <UserCard name="John" age="25" location="Glasgow" />
+          <UserCard name="Jane" age="30" location="Edinburgh" />
+        </div>
+        <div>
+          <ProductCard name="Laptop" price="£500" description="A laptop" />
+          <ProductCard name="Phone" price="£200" description="A phone" />
+        </div>
+        <Counter />
+      </div>
     </>
-    
-  )
-}
+  );
+};
 
 export default App;

@@ -4,7 +4,7 @@ const Colour = (props) => {
 
     return (
         <>
-        <h3> YOur favourite colour is {props.colour} </h3>
+        <h3> Your favourite colour is {props.colour} </h3>
         </>
     )
 }
